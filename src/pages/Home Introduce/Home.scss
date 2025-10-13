@@ -1,0 +1,107 @@
+// Màu & hiệu ứng
+$purple: #9f5fff;
+$pink: #ff61e6;
+$text-dark: #111;
+$text-mid: #333;
+$text-light: #666;
+
+@mixin gradient-text {
+  background: linear-gradient(90deg, $purple, $pink);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ----- HOME SECTION ----- */
+.home-section {
+  color: $text-dark;
+  padding: 80px 0;
+
+  .heading {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+    color: $text-dark;
+
+    .main-name {
+      @include gradient-text;
+      font-weight: 900;
+    }
+  }
+
+  .heading-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $text-mid;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+
+    .purple {
+      @include gradient-text;
+    }
+  }
+
+  .Typewriter__wrapper {
+    font-size: 1.1rem;
+    color: $text-light;
+    font-weight: 400;
+  }
+
+  .Typewriter__cursor {
+    color: $pink;
+  }
+}
+
+/* ----- ABOUT SECTION ----- */
+.home-about-section {
+  color: $text-dark;
+  padding: 80px 0;
+
+  .home-about-description {
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: $text-dark;
+      margin-bottom: 20px;
+
+      .purple {
+        @include gradient-text;
+      }
+    }
+
+    .home-about-body {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: $text-light;
+      text-align: justify;
+
+      b {
+        color: $text-mid;
+        font-weight: 600;
+      }
+
+      i {
+        color: $purple;
+      }
+    }
+  }
+}
+
+/* ----- Hiệu ứng nhẹ khi hover chữ gradient ----- */
+.main-name:hover,
+.purple:hover {
+  filter: brightness(1.2);
+  transition: all 0.3s ease;
+}
+
+/* ----- Responsive nhỏ gọn ----- */
+@media (max-width: 768px) {
+  .home-section .heading {
+    font-size: 2.2rem;
+  }
+
+  .home-about-description h1 {
+    font-size: 2rem;
+  }
+}

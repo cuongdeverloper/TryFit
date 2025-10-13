@@ -1,0 +1,21 @@
+:root {
+  --bg1: #f7f2ff;
+  --bg2: #f2ebff;
+}
+.home-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg1), var(--bg2));
+}
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.home-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}

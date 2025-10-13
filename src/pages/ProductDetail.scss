@@ -1,0 +1,227 @@
+.product-detail-page {
+  background: #fafafa;
+  min-height: 100vh;
+}
+
+.detail-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+
+  .detail-image {
+    flex: 1;
+    min-width: 320px;
+
+    img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      object-fit: cover;
+    }
+  }
+
+  .detail-info {
+    flex: 1;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .product-name {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #222;
+    }
+
+    .price-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      .current-price {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #e63946;
+      }
+      .original-price {
+        text-decoration: line-through;
+        color: #888;
+        font-size: 1rem;
+      }
+    }
+
+    .detail-sizes {
+      margin-top: 10px;
+
+      h4 {
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #333;
+      }
+
+      .size-list {
+        display: flex;
+        gap: 10px;
+
+        .size-item {
+          border: 1px solid #ccc;
+          padding: 8px 14px;
+          border-radius: 6px;
+          cursor: pointer;
+          font-weight: 500;
+          transition: all 0.2s;
+
+          &.active {
+            background: #111;
+            color: #fff;
+            border-color: #111;
+          }
+
+          &:hover {
+            border-color: #000;
+          }
+        }
+      }
+    }
+
+    .detail-actions {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+
+      button {
+        flex: 1;
+        padding: 12px 18px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .add-cart-btn {
+        background: #222;
+        color: #fff;
+        &:hover {
+          background: #000;
+        }
+      }
+
+      .tryon-btn {
+        background: #fff;
+        color: #222;
+        border: 1px solid #ccc;
+
+        &:hover {
+          border-color: #000;
+        }
+      }
+    }
+
+    .detail-description {
+      margin-top: 20px;
+
+      h4 {
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      p {
+        line-height: 1.6;
+        color: #444;
+      }
+    }
+  }
+}
+
+/* Popup Try-On (giữ nguyên cũ) */
+.tryon-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+
+  .tryon-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+
+    .close-btn {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      border: none;
+      background: transparent;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: #888;
+
+      &:hover {
+        color: #000;
+      }
+    }
+
+    .upload-box {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 2px dashed #aaa;
+      border-radius: 10px;
+      padding: 30px;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-bottom: 20px;
+
+      &:hover {
+        border-color: #222;
+        color: #222;
+      }
+    }
+
+    .preview-box img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .generate-btn {
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      .spin {
+        animation: spin 1s linear infinite;
+      }
+      &:hover {
+        background: #333;
+      }
+    }
+
+    .result-box img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 15px;
+    }
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
