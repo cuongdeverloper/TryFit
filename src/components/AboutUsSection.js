@@ -5,7 +5,7 @@ import "./AboutUsSection.scss";
 
 export default function AboutUsSection() {
   const handleNavigate = () => {
-    window.open("https://tryfit-lilac.vercel.app/registerdemo", "_blank");
+    window.open("https://try-fit-dn.vercel.app/registerdemo", "_blank");
   };
 
   return (
