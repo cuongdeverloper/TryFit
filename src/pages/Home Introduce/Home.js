@@ -5,7 +5,6 @@ import Type from "./Type";
 import Particle12 from "../../components/Particles12";
 import logo from "../../assets/logo.png";
 import './Home.scss'
-import demoVideo from "../../assets/Tryfit Feature Demo.mp4"
 
 function Home() {
   return (
@@ -29,21 +28,17 @@ function Home() {
 
               {/* Video Demo */}
               <div className="home-video" style={{ textAlign: 'center', marginTop: '40px' }}>
-                <video
-                  src={demoVideo}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="auto"
-                  className="demo-video"
-                  style={{
-                    width: '100%',
-                    maxWidth: '600px',
-                    borderRadius: '15px',
-                    boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
-                  }}
-                />
+                <iframe
+                  width="100%"
+                  height="340"
+                  style={{ maxWidth: '600px', borderRadius: '15px', boxShadow: '0 10px 25px rgba(0,0,0,0.1)' }}
+                  src="https://www.youtube.com/embed/7GnA8HELiWk?autoplay=1&mute=1&loop=1&playlist=7GnA8HELiWk"
+                  title="YouTube video"
+                  frameBorder="0"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                ></iframe>
+
 
               </div>
             </Col>
