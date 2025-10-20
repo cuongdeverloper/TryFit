@@ -1,46 +1,47 @@
 import React from "react";
 import "./AboutUs.scss";
-import DHC from '../assets/DHC.jpg'
-import MA from '../assets/MA.jpg'
-import HA from '../assets/HA.jpg'
-import HN from '../assets/HN.jpg'
-import VK from '../assets/VK.jpg'
-import TT from '../assets/TT.jpg'
+import DHC from "../assets/DHC.jpg";
+import MA from "../assets/MA.jpg";
+import HA from "../assets/HA.jpg";
+import HN from "../assets/HN.jpg";
+import VK from "../assets/VK.jpg";
+import TT from "../assets/TT.jpg";
+
 const team = [
   {
     name: "Bùi Ngọc Minh Anh",
     role: "CEO",
-    desc: "Multimedia student, responsible for brand messaging, public relations, and strategic storytelling.",
+    desc: "Sinh viên Multimedia, phụ trách chiến lược thương hiệu, truyền thông và storytelling.",
     img: MA,
   },
   {
     name: "Trần Hoài Anh",
     role: "COO - CCO",
-    desc: "Multimedia student, in charge of operations, team management, and marketing direction.",
+    desc: "Sinh viên Multimedia, quản lý vận hành, đội nhóm và định hướng marketing.",
     img: HA,
   },
   {
     name: "Hiếu Ngân",
     role: "CDO",
-    desc: "Design student, responsible for UI/UX and visual branding.",
+    desc: "Sinh viên Thiết kế, chịu trách nhiệm UI/UX và nhận diện hình ảnh thương hiệu.",
     img: HN,
   },
   {
     name: "Lê Trung Thành",
     role: "CPO - DEV",
-    desc: "Software student, skilled in product development and UX/UI.",
+    desc: "Sinh viên Công nghệ, phát triển sản phẩm và tối ưu trải nghiệm người dùng.",
     img: TT,
   },
   {
     name: "Đỗ Hùng Cường",
     role: "CTO - DEV",
-    desc: "Software student, skilled in product development and UX/UI.",
+    desc: "Sinh viên Công nghệ, chuyên phát triển sản phẩm và UX/UI.",
     img: DHC,
   },
   {
     name: "Khoa Nguyễn",
     role: "CIO - DEV",
-    desc: "Software student, skilled in product development and UX/UI.",
+    desc: "Sinh viên Công nghệ, đảm nhận phát triển sản phẩm và UX/UI.",
     img: VK,
   },
 ];
@@ -48,10 +49,22 @@ const team = [
 const AboutUs = () => {
   return (
     <section className="about-section" id="about">
-      <h2 className="about-title">TRYFIT’S TEAM</h2>
+      {/* Câu chuyện của chúng tôi */}
+      <div className="story-container">
+        <h2 className="section-title">Câu Chuyện / Tại Sao Chúng Tôi Tạo Ra Tryfit</h2>
+        <p className="story-text">
+          → Chúng tôi là nhóm sinh viên đam mê công nghệ và thời trang, mong muốn
+          giúp các thương hiệu Việt áp dụng công nghệ mới để nâng cao trải nghiệm khách hàng.
+        </p>
+      </div>
+
+      {/* Đội ngũ */}
+      <h2 className="about-title">
+        ĐỘI NGŨ TRYFIT
+      </h2>
       <div className="team-container">
         {team.map((member, index) => (
-          <div className="team-card" key={index}>
+          <div className="team-card" key={index} data-aos-delay={index * 100}>
             <img src={member.img} alt={member.name} className="team-img" />
             <div className="team-info">
               <h3>{member.name}</h3>

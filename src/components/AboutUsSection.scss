@@ -1,0 +1,87 @@
+.about-us-section {
+  padding: 100px 0;
+  color: #343a40;
+  font-family: "Poppins", sans-serif;
+
+  .section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    color: #1e1e1e;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, #6f42c1, #7952f2);
+      border-radius: 2px;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #495057;
+  }
+
+  .about-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .icon-wrapper {
+      font-size: 2.5rem;
+      color: #6f42c1;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.05rem;
+      color: #555;
+    }
+  }
+
+  .btn-register {
+    background: linear-gradient(90deg, #6f42c1, #7952f2);
+    border: none;
+    padding: 14px 35px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    color: #fff;
+
+    &:hover {
+      background: linear-gradient(90deg, #7952f2, #6f42c1);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  @media (max-width: 768px) {
+    text-align: center;
+    .about-card {
+      margin: 0 auto 30px auto;
+    }
+  }
+}

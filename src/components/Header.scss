@@ -165,4 +165,57 @@
       }
     }
   }
-  
+  .actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .search-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .inventory-btn {
+    background: #6c63ff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  .trial-btn {
+    background: black;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  .signup-btn {
+    background: #ff6b6b;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

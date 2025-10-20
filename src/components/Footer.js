@@ -5,47 +5,63 @@ export default function Footer() {
     <footer className="footer">
       <div className="container">
         <div className="footer-content">
-          <div>
-            <h3>TryFit</h3>
+          {/* Logo & Giới thiệu */}
+          <div className="footer-brand">
             <p>
-              Revolutionizing online shopping with AI-powered virtual fitting rooms. 
-              Experience the future of fashion retail.
+              Cách mạng hóa trải nghiệm mua sắm trực tuyến với phòng thử đồ ảo AI. 
+              Trải nghiệm tương lai của ngành bán lẻ thời trang.
             </p>
           </div>
 
+          {/* Nền tảng */}
           <div>
-            <h4>Platform</h4>
+            <h4>Nền tảng</h4>
             <ul>
-              <li><a href="#">Web App</a></li>
-              <li><a href="#">Features</a></li>
+              <li><a href="#">Ứng dụng Web</a></li>
+              <li><a href="#">Tính năng</a></li>
               <li><a href="#">API</a></li>
-              <li><a href="#">Integrations</a></li>
+              <li><a href="#">Tích hợp</a></li>
             </ul>
           </div>
 
+          {/* Công ty */}
           <div>
-            <h4>Company</h4>
+            <h4>Công ty</h4>
             <ul>
-              <li><a href="#">About</a></li>
+              <li><a href="#">Giới thiệu</a></li>
               <li><a href="#">Blog</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#">Tuyển dụng</a></li>
+              <li><a href="#">Liên hệ</a></li>
             </ul>
           </div>
 
+          {/* Hỗ trợ */}
           <div>
-            <h4>Support</h4>
+            <h4>Hỗ trợ</h4>
             <ul>
-              <li><a href="#">Help Center</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms of Service</a></li>
-              <li><a href="#">Status</a></li>
+              <li><a href="#">Trung tâm trợ giúp</a></li>
+              <li><a href="#">Chính sách bảo mật</a></li>
+              <li><a href="#">Điều khoản dịch vụ</a></li>
+              <li><a href="#">Tình trạng hệ thống</a></li>
+            </ul>
+          </div>
+
+          {/* Liên hệ & Mạng xã hội */}
+          <div>
+            <h4>Liên hệ</h4>
+            <ul>
+              <li>Zalo: 094 670 81 81</li>
+              <li>
+                Mạng xã hội: 
+                <a href="https://www.facebook.com/profile.php?id=61581350468838" target="_blank" rel="noopener noreferrer" className="social-link">Facebook</a>
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2024 TryFit Virtual Fitting Room. All rights reserved.</p>
+          <p>&copy; 2024 TryFit Virtual Fitting Room. Bản quyền thuộc về TryFit.</p>
+          <p className="student-project">Dự án sinh viên từ Đại học FPT, Đà Nẵng.</p>
         </div>
       </div>
     </footer>

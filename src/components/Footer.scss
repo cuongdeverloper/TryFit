@@ -1,69 +1,93 @@
-.footer {border-top: 2px dashed black;
-    background: linear-gradient(135deg, #f9f6ff, #f1ecff); // nền pastel tím nhạt
-    padding: 3rem 1rem 2rem;
-    color: #555;
-    font-family: "Inter", sans-serif;
-  
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
+.footer {
+  border-top: 2px dashed black;
+  background: linear-gradient(135deg, #f9f6ff, #f1ecff); 
+  padding: 3rem 1rem 2rem;
+  color: #555;
+  font-family: "Inter", sans-serif;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+
+    h3, h4 {
+      color: #333;
+      font-weight: 700;
+      margin-bottom: 1rem;
     }
-  
-    .footer-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2.5rem;
-      margin-bottom: 2rem;
-  
-      h3 {
-        color: #333;
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-      }
-  
-      h4 {
-        color: #444;
-        font-size: 1.2rem;
-        font-weight: 600;
-        margin-bottom: 1rem;
-      }
-  
-      p {
-        line-height: 1.6;
-        color: #666;
-      }
-  
-      ul {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-  
-        li {
-          a {
-            color: #555;
-            text-decoration: none;
-            transition: color 0.3s ease;
-  
-            &:hover {
-              color: #764ba2; // tím nhạt hover
-            }
-          }
+
+    h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #444;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #666;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      li a {
+        color: #555;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #764ba2;
         }
       }
+
+      .social-link {
+        margin: 0 0.3rem;
+      }
     }
-  
-    .footer-bottom {
-      text-align: center;
-      border-top: 1px solid rgba(118, 75, 162, 0.2); // border tím nhạt
-      padding-top: 1.5rem;
-  
-      p {
-        font-size: 0.9rem;
-        color: #777;
+
+    .footer-brand {
+      img.footer-logo {
+        width: 120px;
+        margin-bottom: 1rem;
       }
     }
   }
-  
+
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(118, 75, 162, 0.2);
+    padding-top: 1.5rem;
+
+    p {
+      font-size: 0.9rem;
+      color: #777;
+      margin: 0.2rem 0;
+    }
+
+    .student-project {
+      font-style: italic;
+      color: #555;
+    }
+  }
+}
+.social-link {
+  color: #1877f2;          // màu xanh Facebook
+  font-weight: 600;        // chữ đậm hơn
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #0f5dc0;        // màu xanh đậm khi hover
+    text-decoration: underline; // thêm gạch chân khi hover
+  }
+}

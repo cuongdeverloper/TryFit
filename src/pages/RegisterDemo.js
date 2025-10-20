@@ -1,20 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Form, Button, Container, Row, Col, Card, Spinner, Alert } from "react-bootstrap";
 import emailjs from "emailjs-com";
-import { User, Mail, Phone, FileText } from "lucide-react";
+import { User, Mail, Phone, FileText, Tag, DollarSign } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 import MainLayout from "./MainLayout";
 import "./RegisterDemo.scss";
 import Particles from "../components/Particles";
 
 export default function RegisterDemo() {
   const [form, setForm] = useState({
-    firstName: "",
     fullName: "",
     email: "",
     phone: "",
+    brandName: "",
+    budget: "",
     note: "",
   });
 
@@ -49,10 +49,11 @@ export default function RegisterDemo() {
 
       setSuccess(true);
       setForm({
-        firstName: "",
         fullName: "",
         email: "",
         phone: "",
+        brandName: "",
+        budget: "",
         note: "",
       });
     } catch (error) {
@@ -67,15 +68,16 @@ export default function RegisterDemo() {
     <MainLayout showFooter={false}>
       <div className='reset-container' style={{ position: 'relative' }}>
         <div className="ProfileManage-container-parti" style={{ position: 'absolute', zIndex: 1 }}>
-        <Particles />
-      </div>
+          <Particles />
+        </div>
         <div
           className="register-demo"
           style={{
             minHeight: "100vh",
             display: "flex",
             alignItems: "center",
-            position: 'relative', zIndex: 100, marginTop: '10px', width: '100%'
+            position: 'relative', zIndex: 100, width: '100%',
+            marginTop:'50px'
           }}
         >
           <Container>
@@ -88,43 +90,30 @@ export default function RegisterDemo() {
                 >
                   <Card.Body className="p-5 bg-white">
                     <h2 className="text-center text-primary mb-4 fw-bold">
-                      🚀 Register for Live Demo
+                      🚀 Đăng ký trải nghiệm Live Demo
                     </h2>
                     <p className="text-center text-muted mb-4">
-                      Fill out the form below and we’ll contact you soon.
+                      Điền thông tin bên dưới và chúng tôi sẽ liên hệ với bạn sớm.
                     </p>
 
                     <Form onSubmit={handleSubmit}>
-                      <Form.Group className="mb-3">
-                        <Form.Label>
-                          <User size={18} className="me-2 text-primary" />
-                          First Name
-                        </Form.Label>
-                        <Form.Control
-                          type="text"
-                          name="firstName"
-                          value={form.firstName}
-                          onChange={handleChange}
-                          placeholder="Enter your first name"
-                          required
-                        />
-                      </Form.Group>
-
+                      {/* Full Name */}
                       <Form.Group className="mb-3">
                         <Form.Label>
                           <FileText size={18} className="me-2 text-primary" />
-                          Full Name
+                          Tên đầy đủ
                         </Form.Label>
                         <Form.Control
                           type="text"
                           name="fullName"
                           value={form.fullName}
                           onChange={handleChange}
-                          placeholder="Enter your full name"
+                          placeholder="Nhập tên đầy đủ của bạn"
                           required
                         />
                       </Form.Group>
 
+                      {/* Email */}
                       <Form.Group className="mb-3">
                         <Form.Label>
                           <Mail size={18} className="me-2 text-primary" />
@@ -135,35 +124,69 @@ export default function RegisterDemo() {
                           name="email"
                           value={form.email}
                           onChange={handleChange}
-                          placeholder="Enter your email"
+                          placeholder="Nhập email của bạn"
                           required
                         />
                       </Form.Group>
 
+                      {/* Phone */}
                       <Form.Group className="mb-3">
                         <Form.Label>
                           <Phone size={18} className="me-2 text-primary" />
-                          Phone Number
+                          Số điện thoại
                         </Form.Label>
                         <Form.Control
                           type="tel"
                           name="phone"
                           value={form.phone}
                           onChange={handleChange}
-                          placeholder="Enter your phone number"
+                          placeholder="Nhập số điện thoại"
                           required
                         />
                       </Form.Group>
 
+                      {/* Brand Name */}
+                      <Form.Group className="mb-3">
+                        <Form.Label>
+                          <Tag size={18} className="me-2 text-primary" />
+                          Tên thương hiệu
+                        </Form.Label>
+                        <Form.Control
+                          type="text"
+                          name="brandName"
+                          value={form.brandName}
+                          onChange={handleChange}
+                          placeholder="Nhập tên thương hiệu của bạn"
+                          required
+                        />
+                      </Form.Group>
+
+                      {/* Budget */}
+                      <Form.Group className="mb-3">
+                        <Form.Label>
+                          <DollarSign size={18} className="me-2 text-primary" />
+                          Mức giá sẵn sàng chi trả
+                        </Form.Label>
+                        <Form.Control
+                          type="text"
+                          name="budget"
+                          value={form.budget}
+                          onChange={handleChange}
+                          placeholder="Nhập mức giá bạn sẵn sàng chi trả"
+                          required
+                        />
+                      </Form.Group>
+
+                      {/* Note */}
                       <Form.Group className="mb-4">
-                        <Form.Label>Note (optional)</Form.Label>
+                        <Form.Label>Ghi chú (tùy chọn)</Form.Label>
                         <Form.Control
                           as="textarea"
                           rows={3}
                           name="note"
                           value={form.note}
                           onChange={handleChange}
-                          placeholder="Tell us more..."
+                          placeholder="Bạn muốn nói gì thêm..."
                         />
                       </Form.Group>
 
@@ -177,10 +200,10 @@ export default function RegisterDemo() {
                         >
                           {loading ? (
                             <>
-                              <Spinner animation="border" size="sm" className="me-2" /> Sending...
+                              <Spinner animation="border" size="sm" className="me-2" /> Đang gửi...
                             </>
                           ) : (
-                            "Submit Request"
+                            "Gửi đăng ký"
                           )}
                         </Button>
                       </div>
@@ -188,7 +211,7 @@ export default function RegisterDemo() {
 
                     {success && (
                       <Alert variant="success" className="mt-4 text-center rounded-3">
-                        ✅ Thank you! We’ll get in touch soon.
+                        ✅ Cảm ơn! Chúng tôi sẽ liên hệ bạn sớm.
                       </Alert>
                     )}
                   </Card.Body>
@@ -198,7 +221,6 @@ export default function RegisterDemo() {
           </Container>
         </div>
       </div>
-
     </MainLayout>
   );
 }
