@@ -31,13 +31,18 @@ function Home() {
                 <iframe
                   width="100%"
                   height="340"
-                  style={{ maxWidth: '600px', borderRadius: '15px', boxShadow: '0 10px 25px rgba(0,0,0,0.1)' }}
-                  src="https://www.youtube.com/embed/7GnA8HELiWk?autoplay=1&mute=1&loop=1&playlist=7GnA8HELiWk"
-                  title="YouTube video"
+                  style={{
+                    maxWidth: '600px',
+                    borderRadius: '15px',
+                    boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
+                  }}
+                  src="https://drive.google.com/file/d/13kLUivuu8SysfCxN7a_Xr8nYkRihnTvi/preview"
+                  title="Video demo TryFit"
                   frameBorder="0"
                   allow="autoplay; encrypted-media"
                   allowFullScreen
                 ></iframe>
+
 
 
               </div>

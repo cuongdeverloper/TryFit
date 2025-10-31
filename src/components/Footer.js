@@ -50,7 +50,7 @@ export default function Footer() {
           <div>
             <h4>Liên hệ</h4>
             <ul>
-              <li>Zalo: 094 670 81 81</li>
+              <li>Email: tryfitvirtualtryon@gmail.com</li>
               <li>
                 Mạng xã hội: 
                 <a href="https://www.facebook.com/profile.php?id=61581350468838" target="_blank" rel="noopener noreferrer" className="social-link">Facebook</a>
