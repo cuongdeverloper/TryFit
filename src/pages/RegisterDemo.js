@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Form, Button, Container, Row, Col, Card, Spinner, Alert } from "react-bootstrap";
 import emailjs from "emailjs-com";
-import { User, Mail, Phone, FileText, Tag, DollarSign } from "lucide-react";
+import { Mail, FileText, Tag, DollarSign } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import MainLayout from "./MainLayout";
@@ -12,7 +12,6 @@ export default function RegisterDemo() {
   const [form, setForm] = useState({
     fullName: "",
     email: "",
-    phone: "",
     brandName: "",
     budget: "",
     note: "",
@@ -51,7 +50,6 @@ export default function RegisterDemo() {
       setForm({
         fullName: "",
         email: "",
-        phone: "",
         brandName: "",
         budget: "",
         note: "",
@@ -77,7 +75,7 @@ export default function RegisterDemo() {
             display: "flex",
             alignItems: "center",
             position: 'relative', zIndex: 100, width: '100%',
-            marginTop:'50px'
+            marginTop: '50px'
           }}
         >
           <Container>
@@ -125,22 +123,6 @@ export default function RegisterDemo() {
                           value={form.email}
                           onChange={handleChange}
                           placeholder="Nhập email của bạn"
-                          required
-                        />
-                      </Form.Group>
-
-                      {/* Phone */}
-                      <Form.Group className="mb-3">
-                        <Form.Label>
-                          <Phone size={18} className="me-2 text-primary" />
-                          Số điện thoại
-                        </Form.Label>
-                        <Form.Control
-                          type="tel"
-                          name="phone"
-                          value={form.phone}
-                          onChange={handleChange}
-                          placeholder="Nhập số điện thoại"
                           required
                         />
                       </Form.Group>
