@@ -36,12 +36,13 @@ function Home() {
                     borderRadius: '15px',
                     boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
                   }}
-                  src="https://drive.google.com/file/d/13kLUivuu8SysfCxN7a_Xr8nYkRihnTvi/preview"
+                  src="https://drive.google.com/file/d/11Q0ND3PrdRlxxiF69j5h9OzC04SkzRI1/preview"
                   title="Video demo TryFit"
                   frameBorder="0"
                   allow="autoplay; encrypted-media"
                   allowFullScreen
                 ></iframe>
+
 
 
 
